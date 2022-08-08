@@ -12,8 +12,6 @@ toggleButton.addEventListener('click', async () => {
         pageHeader.style.color = 'black';
         cardText.style.color = 'black';
         foot.style.color = 'black';
-
-
     } else {
         toggleButton.style.color = 'white';
         toggleButton.style.borderColor = 'white';
