@@ -11,8 +11,7 @@ function generateHexColor () {
     primaryHex = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
 }
 
-function invertHex () {
-    function invertColor(hex, bw) {
+function invertHex (hex, bw) { 
     if (hex.indexOf('#') === 0) {
         hex = hex.slice(1);
     }
@@ -40,7 +39,7 @@ function invertHex () {
     secondaryHex = "#" + padZero(r) + padZero(g) + padZero(b);
 }
 
-}
+
 
 toggleButton.addEventListener('click', async () => {
     if(toggleButton.style.color === 'white') {
