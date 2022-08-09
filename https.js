@@ -7,7 +7,6 @@ const cardText = document.querySelector('.card');
 const pfp = document.querySelector('.pfp');
 const speedUp = document.querySelector('#speed-up');
 const speedDown = document.querySelector('#speed-down');
-const footer = document.querySelector('.footer');
 
 let primaryHex;
 let secondaryHex;
@@ -34,8 +33,6 @@ toggleButton.addEventListener('click', async () => {
         speedUp.style.borderColor = 'black'
         speedDown.style.color = 'black'
         speedDown.style.borderColor = 'black'
-        footer.style.backgroundColor = 'black'
-        footer.style.color = 'white'
 
     } else {
         toggleButton.style.color = 'white';
@@ -51,8 +48,6 @@ toggleButton.addEventListener('click', async () => {
         speedUp.style.borderColor = 'white'
         speedDown.style.color = 'white'
         speedDown.style.borderColor = 'white'
-        footer.style.backgroundColor = 'white'
-        footer.style.color = 'black'
     }
 });
 
