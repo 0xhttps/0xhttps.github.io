@@ -72,6 +72,14 @@ toggleColor.addEventListener('click', async () => {
     pageBackGround.style.backgroundColor = primaryHex;
 });
 
+document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+        generateHexColor();
+        pageBackGround.style.backgroundColor = primaryHex;
+    }
+})
+
+
 
 
 
