@@ -32,12 +32,23 @@ h1 {
     padding-right: 5px;
 }
 
+#speed-up {
+    color: black;
+    border: solid 1px;
+    border-color: black;
+}
+
+#speed-down {
+    color: black;
+    border: solid 1px;
+    border-color: black;
+}
+
 .pfp {
     width: 65px;
     height: 65px;
-    position: relative;
     border-radius: 50px;
-    content: url("chainRunner.png");
+    content: url("httpsPixel.png");
     animation: rotation 7s infinite linear;
 }
 

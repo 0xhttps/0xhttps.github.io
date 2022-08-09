@@ -5,9 +5,15 @@ const pageBackGround = document.querySelector('body');
 const pageHeader = document.querySelector('h1');
 const cardText = document.querySelector('.card');
 const pfp = document.querySelector('.pfp');
+const speedUp = document.querySelector('#speed-up');
+const speedDown = document.querySelector('#speed-down');
 
 let primaryHex;
 let secondaryHex;
+const defaultSpeed = 7;
+let speed = 7;
+const maxSpeed = .1;
+const minSpeed = 10;
 
 function generateHexColor () {
     primaryHex = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
@@ -24,6 +30,11 @@ toggleButton.addEventListener('click', async () => {
         toggleColor.style.borderColor = 'black';
         toggleTextColor.style.color = 'black';
         toggleTextColor.style.borderColor = 'black';
+        speedUp.style.color = 'black'
+        speedUp.style.borderColor = 'black'
+        speedDown.style.color = 'black'
+        speedDown.style.borderColor = 'black'
+
     } else {
         toggleButton.style.color = 'white';
         toggleButton.style.borderColor = 'white';
@@ -34,6 +45,10 @@ toggleButton.addEventListener('click', async () => {
         toggleColor.style.borderColor = 'white';
         toggleTextColor.style.color = 'white';
         toggleTextColor.style.borderColor ='white';
+        speedUp.style.color = 'white'
+        speedUp.style.borderColor = 'white'
+        speedDown.style.color = 'white'
+        speedDown.style.borderColor = 'white'
     }
 });
 
@@ -47,6 +62,10 @@ toggleTextColor.addEventListener('click', async () => {
         toggleColor.style.borderColor = 'black';
         toggleTextColor.style.color = 'black';
         toggleTextColor.style.borderColor ='black';
+        speedUp.style.color = 'black'
+        speedUp.style.borderColor = 'black'
+        speedDown.style.color = 'black'
+        speedDown.style.borderColor = 'black'
     } else {
         toggleButton.style.color = 'white';
         toggleButton.style.borderColor = 'white';
@@ -56,16 +75,35 @@ toggleTextColor.addEventListener('click', async () => {
         toggleColor.style.borderColor = 'white';
         toggleTextColor.style.color = 'white';
         toggleTextColor.style.borderColor ='white';
+        speedUp.style.color = 'white'
+        speedUp.style.borderColor = 'white'
+        speedDown.style.color = 'white'
+        speedDown.style.borderColor = 'white'
     }    
 });
 
-pfp.addEventListener('click', async () => {
-    if(pfp.style.content === url("chainRunner.png")) {
-        pfp.style.content = url("httpsPixel.png");
-    } else {
-        pfp.style.content = url("chainRunner.png");
+speedUp.addEventListener('click', async () => {
+    if(!speed <= maxSpeed) {
+        pfp.style.animation = `rotation ${speed}s infinite linear`
+        speed -= .5;
     }
 })
+
+speedDown.addEventListener('click', async () => {
+    if(speed < minSpeed) {
+        pfp.style.animation = `rotation ${speed}s infinite linear`
+        speed += .5;
+    }
+        
+})
+
+//pfp.addEventListener('click', async () => {
+//    if(pfp.style.content === url("chainRunner.png")) {
+//        pfp.style.content = url("httpsPixel.png");
+//    } else {
+//        pfp.style.content = url("chainRunner.png");
+//    }
+//})
 
 toggleColor.addEventListener('click', async () => {
     generateHexColor();
