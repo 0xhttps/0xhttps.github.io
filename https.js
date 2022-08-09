@@ -1,8 +1,10 @@
 const toggleButton = document.querySelector('#dark');
 const toggleColor = document.querySelector('#color-button')
+const toggleTextColor = document.querySelector('#text-color-button');
 const pageBackGround = document.querySelector('body');
 const pageHeader = document.querySelector('h1');
 const cardText = document.querySelector('.card');
+const pfp = document.querySelector('.pfp');
 
 let primaryHex;
 let secondaryHex;
@@ -19,7 +21,9 @@ toggleButton.addEventListener('click', async () => {
         pageHeader.style.color = 'black';
         cardText.style.color = 'black';
         toggleColor.style.color ='black';
-        toggleColor.style.borderColor = 'black'
+        toggleColor.style.borderColor = 'black';
+        toggleTextColor.style.color = 'black';
+        toggleTextColor.style.borderColor = 'black';
     } else {
         toggleButton.style.color = 'white';
         toggleButton.style.borderColor = 'white';
@@ -27,18 +31,50 @@ toggleButton.addEventListener('click', async () => {
         pageHeader.style.color = 'white';
         cardText.style.color = 'white';
         toggleColor.style.color ='white';
-        toggleColor.style.borderColor = 'white'
+        toggleColor.style.borderColor = 'white';
+        toggleTextColor.style.color = 'white';
+        toggleTextColor.style.borderColor ='white';
+    }
+});
+
+toggleTextColor.addEventListener('click', async () => {
+    if(cardText.style.color === 'white') {
+        toggleButton.style.color = 'black';
+        toggleButton.style.borderColor = 'black';
+        pageHeader.style.color = 'black';
+        cardText.style.color = 'black';
+        toggleColor.style.color ='black';
+        toggleColor.style.borderColor = 'black';
+        toggleTextColor.style.color = 'black';
+        toggleTextColor.style.borderColor ='black';
+    } else {
+        toggleButton.style.color = 'white';
+        toggleButton.style.borderColor = 'white';
+        pageHeader.style.color = 'white';
+        cardText.style.color = 'white';
+        toggleColor.style.color ='white';
+        toggleColor.style.borderColor = 'white';
+        toggleTextColor.style.color = 'white';
+        toggleTextColor.style.borderColor ='white';
+    }    
+});
+
+pfp.addEventListener('click', async () => {
+    if(pfp.style.content === url("chainRunner.png")){
+        pfp.style.content = url("httpsPixel.png");
+    } else {
+        pfp.style.content = url("chainRunner.png");
     }
 })
 
+
+
 toggleColor.addEventListener('click', async () => {
     generateHexColor();
-    toggleButton.style.color = secondaryHex;
-    toggleButton.style.borderColor = secondaryHex;
     pageBackGround.style.backgroundColor = primaryHex;
-    pageHeader.style.color = secondaryHex;
-    cardText.style.color = secondaryHex;
-    toggleColor.style.color =secondaryHex;
-    toggleColor.style.borderColor = secondaryHex;
-})
+});
+
+
+
+
 
