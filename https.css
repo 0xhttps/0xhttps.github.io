@@ -100,46 +100,14 @@ h1 {
     height: 3%;
 }
 
-.left-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 3%;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    height: 100%;
-}
-
-.right-footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 3%;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    height: 100%;
-}
-
 :root {
     --width: 30px;
-    --height: 110%;
-    --x-speed: 5s;
-    --y-speed: 6s;
+    --x-speed: 6s;
     --transition-speed: 1s;
 }
 
 .el {
     width: var(--width);
-}
-
-.ely {
-    height: var(--height);
-}
-
-.y {
-    animation: y var(--y-speed) linear infinite alternate;
 }
 
 .x {
@@ -152,10 +120,6 @@ h1 {
     }
 }
 
-@keyframes y {
-    100% {
-        transform: translateY(calc(100vw - var(--height)));
-    }
-}
+
 
 
