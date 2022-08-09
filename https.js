@@ -60,14 +60,12 @@ toggleTextColor.addEventListener('click', async () => {
 });
 
 pfp.addEventListener('click', async () => {
-    if(pfp.style.content === url("chainRunner.png")){
+    if(pfp.style.content === url("chainRunner.png")) {
         pfp.style.content = url("httpsPixel.png");
     } else {
         pfp.style.content = url("chainRunner.png");
     }
 })
-
-
 
 toggleColor.addEventListener('click', async () => {
     generateHexColor();
