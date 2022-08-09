@@ -50,7 +50,7 @@ toggleButton.addEventListener('click', async () => {
         cardText.style.color = 'black';
         toggleColor.style.color ='black';
         toggleColor.style.borderColor = 'black'
-    } else if(toggleButton.style.color == 'black'){
+    } else {
         toggleButton.style.color = 'white';
         toggleButton.style.borderColor = 'white';
         pageBackGround.style.backgroundColor = 'black';
@@ -58,14 +58,6 @@ toggleButton.addEventListener('click', async () => {
         cardText.style.color = 'white';
         toggleColor.style.color ='white';
         toggleColor.style.borderColor = 'white'
-    } else {
-        toggleButton.style.color = 'black';
-        toggleButton.style.borderColor = 'black';
-        pageBackGround.style.backgroundColor = 'white';
-        pageHeader.style.color = 'black';
-        cardText.style.color = 'black';
-        toggleColor.style.color ='black';
-        toggleColor.style.borderColor = 'black'
     }
 })
 
