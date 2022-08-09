@@ -15,6 +15,12 @@ h1 {
     border-color: black;
 }
 
+#color-button {
+    color: black;
+    border: solid 1px;
+    border-color: black;
+}
+
 #color {
     padding-left: 5px;
     padding-right: 5px;
