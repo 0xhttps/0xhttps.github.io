@@ -7,10 +7,10 @@ const cardText = document.querySelector('.card');
 const pfp = document.querySelector('.pfp');
 const speedUp = document.querySelector('#speed-up');
 const speedDown = document.querySelector('#speed-down');
+const footer = document.querySelector('.footer');
 
 let primaryHex;
 let secondaryHex;
-const defaultSpeed = 7;
 let speed = 7;
 const maxSpeed = .1;
 const minSpeed = 10;
@@ -34,6 +34,8 @@ toggleButton.addEventListener('click', async () => {
         speedUp.style.borderColor = 'black'
         speedDown.style.color = 'black'
         speedDown.style.borderColor = 'black'
+        footer.style.backgroundColor = 'black'
+        footer.style.color = 'white'
 
     } else {
         toggleButton.style.color = 'white';
@@ -49,6 +51,8 @@ toggleButton.addEventListener('click', async () => {
         speedUp.style.borderColor = 'white'
         speedDown.style.color = 'white'
         speedDown.style.borderColor = 'white'
+        footer.style.backgroundColor = 'white'
+        footer.style.color = 'black'
     }
 });
 
@@ -97,14 +101,6 @@ speedDown.addEventListener('click', async () => {
         
 })
 
-//pfp.addEventListener('click', async () => {
-//    if(pfp.style.content === url("chainRunner.png")) {
-//        pfp.style.content = url("httpsPixel.png");
-//    } else {
-//        pfp.style.content = url("chainRunner.png");
-//    }
-//})
-
 toggleColor.addEventListener('click', async () => {
     generateHexColor();
     pageBackGround.style.backgroundColor = primaryHex;
@@ -116,9 +112,3 @@ document.addEventListener('keyup', event => {
         pageBackGround.style.backgroundColor = primaryHex;
     }
 })
-
-
-
-
-
-

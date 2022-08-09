@@ -52,15 +52,21 @@ h1 {
     animation: rotation 7s infinite linear;
 }
 
+.pfp-footer {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    content: url("httpsPixel.png");
+    
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(359deg);
     }
-    
 }
 
 .cards {
@@ -83,11 +89,33 @@ h1 {
     color: black;
 }
 
-.foot {
+.footer {
     position: fixed;
-    bottom: 5px;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    background-color: transparent;
-    color: black;
+    background-color: black;
+    color: white;
     text-align: center;
+    height: 3%;
+}
+
+:root {
+    --width: 30px;
+    --x-speed: 6s;
+    --transition-speed: 2.2s;
+}
+
+.el {
+    width: var(--width);
+}
+
+.x {
+    animation: x var(--x-speed) linear infinite alternate;
+}
+
+@keyframes x {
+    100% {
+        transform: translateX(calc(100vw - var(--width)));
+    }
 }
