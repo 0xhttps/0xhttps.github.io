@@ -114,10 +114,10 @@ h1 {
 }
 
 .footer2-github {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50px;
-    content: url("gitHub.png");
+    content: url("gitHub1.png");
 }
 
 .footer2-twitter {
