@@ -86,14 +86,14 @@ speedUp.addEventListener('click', async () => {
         speed = maxSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
     }
-})
+});
 
 speedDown.addEventListener('click', async () => {
     if(speed < minSpeed) {
         speed = minSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
     }    
-})
+});
 
 toggleColor.addEventListener('click', async () => {
     generateHexColor();
@@ -105,4 +105,4 @@ document.addEventListener('keyup', event => {
         generateHexColor();
         pageBackGround.style.backgroundColor = primaryHex;
     }
-})
+});
