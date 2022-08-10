@@ -10,9 +10,9 @@ const speedDown = document.querySelector('#speed-down');
 
 let primaryHex;
 let secondaryHex;
-let speed = 7;
-const maxSpeed = .1;
-const minSpeed = 10;
+let speed = 6.0;
+let maxSpeed = 0.3;
+let minSpeed = 8.0;
 
 function generateHexColor () {
     primaryHex = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
@@ -82,18 +82,17 @@ toggleTextColor.addEventListener('click', async () => {
 });
 
 speedUp.addEventListener('click', async () => {
-    if(!speed <= maxSpeed) {
+    if(speed > maxSpeed) {
+        speed = maxSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
-        speed -= .5;
     }
 })
 
 speedDown.addEventListener('click', async () => {
     if(speed < minSpeed) {
+        speed = minSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
-        speed += .5;
-    }
-        
+    }    
 })
 
 toggleColor.addEventListener('click', async () => {

@@ -36,12 +36,14 @@ h1 {
     color: black;
     border: solid 1px;
     border-color: black;
+    font-size: x-small;
 }
 
 #speed-down {
     color: black;
     border: solid 1px;
     border-color: black;
+    font-size: x-small;
 }
 
 .pfp{
@@ -92,12 +94,45 @@ h1 {
 .footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 4.5%;
     width: 100%;
     background-color: transparent;
     color: white;
     text-align: center;
     height: 3%;
+}
+
+.footer2 {
+    position: fixed;
+    left: 0;
+    bottom: 1.5%;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    height: 3%;
+}
+
+.footer2-github {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    content: url("gitHub.png");
+}
+
+.footer2-twitter {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    content: url("twitter.png");
+}
+
+.pfp {
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    content: url("httpsPixel.png");
+    animation: rotation 7s infinite linear;
 }
 
 :root {
@@ -119,7 +154,3 @@ h1 {
         transform: translateX(calc(100vw - var(--width)));
     }
 }
-
-
-
-
