@@ -19,31 +19,18 @@ function generateHexColor () {
 }
 
 toggleButton.addEventListener('click', async () => {
-    if(toggleButton.style.color === 'white') {
-        toggleButton.style.color = 'black';
-        toggleButton.style.borderColor = 'black';
+    if(pageHeader.style.color === 'white') {
         pageBackGround.style.backgroundColor = 'white';
         pageHeader.style.color = 'black';
         cardText.style.color = 'black';
-        toggleColor.style.color ='black';
-        toggleColor.style.borderColor = 'black';
-        toggleTextColor.style.color = 'black';
-        toggleTextColor.style.borderColor = 'black';
         speedUp.style.color = 'black'
         speedUp.style.borderColor = 'black'
         speedDown.style.color = 'black'
         speedDown.style.borderColor = 'black'
-
     } else {
-        toggleButton.style.color = 'white';
-        toggleButton.style.borderColor = 'white';
         pageBackGround.style.backgroundColor = 'black';
         pageHeader.style.color = 'white';
-        cardText.style.color = 'white';
-        toggleColor.style.color ='white';
-        toggleColor.style.borderColor = 'white';
-        toggleTextColor.style.color = 'white';
-        toggleTextColor.style.borderColor ='white';
+        cardText.style.color = 'white';;
         speedUp.style.color = 'white'
         speedUp.style.borderColor = 'white'
         speedDown.style.color = 'white'
@@ -53,27 +40,15 @@ toggleButton.addEventListener('click', async () => {
 
 toggleTextColor.addEventListener('click', async () => {
     if(cardText.style.color === 'white') {
-        toggleButton.style.color = 'black';
-        toggleButton.style.borderColor = 'black';
         pageHeader.style.color = 'black';
         cardText.style.color = 'black';
-        toggleColor.style.color ='black';
-        toggleColor.style.borderColor = 'black';
-        toggleTextColor.style.color = 'black';
-        toggleTextColor.style.borderColor ='black';
         speedUp.style.color = 'black'
         speedUp.style.borderColor = 'black'
         speedDown.style.color = 'black'
         speedDown.style.borderColor = 'black'
     } else {
-        toggleButton.style.color = 'white';
-        toggleButton.style.borderColor = 'white';
         pageHeader.style.color = 'white';
         cardText.style.color = 'white';
-        toggleColor.style.color ='white';
-        toggleColor.style.borderColor = 'white';
-        toggleTextColor.style.color = 'white';
-        toggleTextColor.style.borderColor ='white';
         speedUp.style.color = 'white'
         speedUp.style.borderColor = 'white'
         speedDown.style.color = 'white'

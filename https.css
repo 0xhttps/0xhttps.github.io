@@ -12,9 +12,8 @@ h1 {
 }
 
 #dark {
-    color: black;
     border: solid 1px;
-    border-color: black;
+    border-color: transparent;
 }
 
 #toggle-buttons {
@@ -24,15 +23,13 @@ h1 {
 }
 
 #color-button {
-    color: black;
     border: solid 1px;
-    border-color: black;
+    border-color: transparent;
 }
 
 #text-color-button {
-    color: black;
     border: solid 1px;
-    border-color: black;
+    border-color: transparent;
 }
 
 #color {
@@ -111,6 +108,38 @@ h1 {
     color: white;
     text-align: center;
     height: 3%;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0%;
+    background-color: transparent;
+    color: white;
+    text-align: right;
+    height: 3%;
+}
+
+.header-img-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    content: url("color-wheel.jpg");
+}
+
+.header-img-dark {
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    content: url("dark.webp");
+}
+
+.header-img-text {
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    content: url("text.png");
 }
 
 .footer2 {
