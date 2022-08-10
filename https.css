@@ -3,33 +3,39 @@ body {
     text-align: center;
     background-color: white;
     vertical-align: middle;
+    animation: fade 3s ease forwards;
 }
 
 h1 {
     color: black;
+    animation: fade 3s ease forwards;
 }
 
 #dark {
     color: black;
     border: solid 1px;
     border-color: black;
+    animation: fade 3s ease forwards;
 }
 
 #color-button {
     color: black;
     border: solid 1px;
     border-color: black;
+    animation: fade 3s ease forwards;
 }
 
 #text-color-button {
     color: black;
     border: solid 1px;
     border-color: black;
+    animation: fade 3s ease forwards;
 }
 
 #color {
     padding-left: 5px;
     padding-right: 5px;
+    animation: fade 3s ease forwards;
 }
 
 #speed-up {
@@ -37,6 +43,7 @@ h1 {
     border: solid 1px;
     border-color: black;
     font-size: x-small;
+    animation: fade 3s ease forwards;
 }
 
 #speed-down {
@@ -44,6 +51,7 @@ h1 {
     border: solid 1px;
     border-color: black;
     font-size: x-small;
+    animation: fade 3s ease forwards;
 }
 
 .pfp{
@@ -52,6 +60,7 @@ h1 {
     border-radius: 50px;
     content: url("httpsPixel.png");
     animation: rotation 7s infinite linear;
+    animation: fade 3s ease forwards;
 }
 
 .pfp-footer {
@@ -60,6 +69,7 @@ h1 {
     border-radius: 50px;
     content: url("httpsPixel.png");
     animation: rotation 7s infinite linear;
+    animation: fade 3s ease forwards;
 }
 
 @keyframes rotation {
@@ -80,6 +90,7 @@ h1 {
     text-align: left;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-gap: 100px;
+    animation: fade 3s ease forwards;
 }
 
 .card {
@@ -89,6 +100,7 @@ h1 {
     background-color: transparent;
     border-color: transparent;
     color: black;
+    animation: fade 3s ease forwards;
 }
 
 .footer {
@@ -100,6 +112,7 @@ h1 {
     color: white;
     text-align: center;
     height: 3%;
+    animation: fade 3s ease forwards;
 }
 
 .footer2 {
@@ -111,6 +124,7 @@ h1 {
     color: white;
     text-align: center;
     height: 3%;
+    animation: fade 3s ease forwards;
 }
 
 .footer2-github {
@@ -118,6 +132,7 @@ h1 {
     height: 35px;
     border-radius: 50px;
     content: url("gitHub1.png");
+    animation: fade 3s ease forwards;
 }
 
 .footer2-twitter {
@@ -125,6 +140,7 @@ h1 {
     height: 35px;
     border-radius: 50px;
     content: url("twitter.png");
+    animation: fade 3s ease forwards;
 }
 
 .pfp {
@@ -133,12 +149,13 @@ h1 {
     border-radius: 50px;
     content: url("httpsPixel.png");
     animation: rotation 7s infinite linear;
+    animation: fade 3s ease forwards;
 }
 
 :root {
     --width: 30px;
     --x-speed: 6s;
-    --transition-speed: 1s;
+    --transition-speed: 3s;
 }
 
 .el {
@@ -152,5 +169,13 @@ h1 {
 @keyframes x {
     100% {
         transform: translateX(calc(100vw - var(--width)));
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }
