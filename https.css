@@ -12,8 +12,8 @@ h1 {
 }
 
 #dark {
-    border: solid 1px;
     border-color: transparent;
+    cursor: pointer;
 }
 
 #toggle-buttons {
@@ -23,13 +23,13 @@ h1 {
 }
 
 #color-button {
-    border: solid 1px;
     border-color: transparent;
+    cursor: pointer;
 }
 
 #text-color-button {
-    border: solid 1px;
     border-color: transparent;
+    cursor: pointer;
 }
 
 #color {
@@ -112,7 +112,7 @@ h1 {
 
 .header {
     position: fixed;
-    left: 0;
+    right: .5%;
     width: 100%;
     top: 0%;
     background-color: transparent;
