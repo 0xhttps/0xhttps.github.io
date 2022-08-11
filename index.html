@@ -12,18 +12,15 @@
 <body>
 
     <!--header stuff-->
-    <div class="header">
+    <div class="header" style="padding-top:1%;padding-right: 1%;">
         <img id="dark" class="header-img-dark">
-        <img id="color-button" class="header-img-color">
-        <img id="text-color-button" class="header-img-text">
+        <img id="color-button" class="header-img-color" onclick="togglePageColor()">
     </div>
     <!--end of header stuff-->
 
     <!--page icon and speed buttons-->
     <div style="padding-top: 1%;">
-        <button id="speed-down" class="btn btn-outline-transparent">-</button>
-        <img class="pfp"> 
-        <button id="speed-up" class="btn btn-outline-transparent">+</button>
+        <img class="pfp" onclick="toggleSpinSpeed()"> 
     </div>
     <!--end of page icon and speed buttons-->
 
@@ -68,9 +65,9 @@
     <!--end of footer-->
 
     <!--start of moving footer img-->
-    <div class="footer">
+    <div class="footer" style="padding-bottom: 6px;">
         <div class="el x">
-            <img class="pfp-footer" style="padding-top: 1px;">
+            <img class="pfp-footer">
             <img>
         </div>
     </div>

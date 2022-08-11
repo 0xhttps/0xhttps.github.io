@@ -27,29 +27,10 @@ h1 {
     cursor: pointer;
 }
 
-#text-color-button {
-    border-color: transparent;
-    cursor: pointer;
-}
 
 #color {
     padding-left: 5px;
     padding-right: 5px;
-}
-
-#speed-up {
-    color: black;
-    border: solid 1px;
-    border-color: black;
-    font-size: x-small;
-    animation-delay: 3s;
-}
-
-#speed-down {
-    color: black;
-    border: solid 1px;
-    border-color: black;
-    font-size: x-small;
 }
 
 .pfp{
@@ -102,7 +83,7 @@ h1 {
 .footer {
     position: fixed;
     left: 0;
-    bottom: 4.5%;
+    bottom: 5.5%;
     width: 100%;
     background-color: transparent;
     color: white;
@@ -122,35 +103,29 @@ h1 {
 }
 
 .header-img-color {
-    width: 22px;
-    height: 22px;
+    width: 35px;
+    height: 35px;
     border-radius: 50px;
-    content: url("color-wheel.jpg");
+    content: url("colorWheel.jpg");
 }
 
 .header-img-dark {
-    width: 22px;
-    height: 22px;
+    width: 35px;
+    height: 35px;
     border-radius: 50px;
-    content: url("dark.webp");
+    content: url("darkMode.png");
 }
 
-.header-img-text {
-    width: 22px;
-    height: 22px;
-    border-radius: 50px;
-    content: url("text.png");
-}
+
 
 .footer2 {
     position: fixed;
     left: 0;
-    bottom: 2.2%;
+    bottom: 1%;
     width: 100%;
     background-color: transparent;
     color: white;
     text-align: center;
-    height: 3%;
 }
 
 .footer2-github {
