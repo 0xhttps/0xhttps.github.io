@@ -81,3 +81,11 @@ document.addEventListener('keyup', event => {
         pageBackGround.style.backgroundColor = primaryHex;
     }
 });
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
