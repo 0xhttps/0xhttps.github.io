@@ -52,7 +52,6 @@ function toggleSpinSpeed() {
     }
 }
 
-
 function togglePageColor() {
     generateHexColor();
     hexToRgb();
