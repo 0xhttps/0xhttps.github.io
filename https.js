@@ -42,26 +42,6 @@ toggleButton.addEventListener('click', async () => {
     }
 });
 
-toggleTextColor.addEventListener('click', async () => {
-    if(cardText.style.color === 'white') {
-        pageHeader.style.color = 'black';
-        cardText.style.color = 'black';
-    } else {
-        pageHeader.style.color = 'white';
-        cardText.style.color = 'white';
-    }    
-});
-
-pfp.addEventListener('click', async () => {
-    if(speed === maxSpeed) {
-        speed = minSpeed;
-        pfp.style.animation = `rotation ${speed}s infinite linear`
-    } else {
-        speed = maxSpeed;
-        pfp.style.animation = `rotation ${speed}s infinite linear`
-    }
-});
-
 function toggleSpinSpeed() {
     if(speed === maxSpeed) {
         speed = minSpeed;
