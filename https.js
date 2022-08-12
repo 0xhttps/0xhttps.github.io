@@ -5,6 +5,7 @@ const pageBackGround = document.querySelector('body');
 const pageHeader = document.querySelector('h1');
 const cardText = document.querySelector('.card');
 const pfp = document.querySelector('.pfp');
+const emailForm = document.querySelector('.form-container');
 
 let primaryHex;
 let secondaryHex;
@@ -13,10 +14,12 @@ let maxSpeed = 0.3;
 let minSpeed = 8.0;
 let r,g,b;
 
+//generates random hex for background
 function generateHexColor () {
     primaryHex = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
 }
 
+//gets black or white depending on hex generated.
 function hexToRgb() {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(primaryHex);
     r = parseInt(result[1], 16);
@@ -30,6 +33,7 @@ function hexToRgb() {
     }
 }
 
+//toggle dark / light mode
 toggleButton.addEventListener('click', async () => {
     if(pageHeader.style.color === 'white') {
         pageBackGround.style.backgroundColor = 'white';
@@ -38,10 +42,11 @@ toggleButton.addEventListener('click', async () => {
     } else {
         pageBackGround.style.backgroundColor = 'black';
         pageHeader.style.color = 'white';
-        cardText.style.color = 'white';;
+        cardText.style.color = 'white';
     }
 });
 
+//toggle pfp spin speed
 function toggleSpinSpeed() {
     if(speed === maxSpeed) {
         speed = minSpeed;
@@ -52,6 +57,7 @@ function toggleSpinSpeed() {
     }
 }
 
+//generate random hex and set new background. calls generateHexColor() and then hexToRgb()
 function togglePageColor() {
     generateHexColor();
     hexToRgb();
@@ -60,10 +66,12 @@ function togglePageColor() {
     cardText.style.color = secondaryHex;
 } 
 
+//opens email form
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
+//closes email form
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
