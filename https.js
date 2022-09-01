@@ -5,12 +5,14 @@ const pageBackGround = document.querySelector('body');
 const pageHeader = document.querySelector('h1');
 const cardText = document.querySelector('.card');
 const pfp = document.querySelector('.pfp');
+const pfp2 = document.querySelector('.pfp2'); //might use later
+const pfpFooter = document.querySelector('.pfp-footer');    
 const emailForm = document.querySelector('.form-container');
 
 let primaryHex;
 let secondaryHex;
 let speed = 8.0;
-let maxSpeed = 0.3;
+let maxSpeed = 0.5;
 let minSpeed = 8.0;
 let r,g,b;
 
@@ -51,10 +53,18 @@ function toggleSpinSpeed() {
     if(speed === maxSpeed) {
         speed = minSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
+        pfpFooter.style.animation = `rotation ${speed}s infinite linear`
+
     } else {
         speed = maxSpeed;
         pfp.style.animation = `rotation ${speed}s infinite linear`
+        pfpFooter.style.animation = `rotation ${speed}s infinite linear`
     }
+}
+
+//add later. need to make give other img its own class and idek lol
+function changeHeaderImg() {
+
 }
 
 //generate random hex and set new background. calls generateHexColor() and then hexToRgb()
@@ -65,6 +75,11 @@ function togglePageColor() {
     pageHeader.style.color = secondaryHex;
     cardText.style.color = secondaryHex;
 } 
+
+function copyColor() {
+    var colorToCopy = primaryHex;
+
+}
 
 //opens email form
 function openForm() {

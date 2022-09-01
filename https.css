@@ -1,13 +1,13 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    background-color: white;
+    background-color: black;
     vertical-align: middle;
-    animation: fade 4s ease forwards;
+    animation: fade 4.3s ease forwards;
 }
 
 h1 {
-    color: black;
+    color: white;
     
 }
 
@@ -16,10 +16,9 @@ h1 {
     cursor: pointer;
 }
 
-#toggle-buttons {
-    color: black;
-    border: solid 1px;
-    border-color: black;
+#copy {
+    border-color: transparent;
+    cursor: pointer;
 }
 
 #color-button {
@@ -33,21 +32,22 @@ h1 {
     padding-right: 5px;
 }
 
-.pfp{
+.pfp {
     width: 65px;
     height: 65px;
+    cursor: pointer;
     border-radius: 50px;
     content: url("httpsPixel.png");
-    animation: rotation 7s infinite linear;
-    animation: fade 3s forwards;
+    animation: rotation 8s infinite linear;
 }
+
 
 .pfp-footer {
     width: 25px;
     height: 25px;
     border-radius: 50px;
     content: url("httpsPixel.png");
-    animation: rotation 7s infinite linear;
+    animation: rotation 8s infinite linear;
 }
 
 @keyframes rotation {
@@ -63,12 +63,12 @@ h1 {
     display: flex;
     margin-left: auto;
     margin-left: auto;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 17%;
+    padding-right: 17%;
     text-align: left;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-gap: 100px;
-    animation: 3s slide-right;
+    /*animation: 3s slide-right; need to find better way to do this*/
 }
 
 .card {
@@ -77,18 +77,18 @@ h1 {
     grid-template-rows: max-content 100px 7fr;
     background-color: transparent;
     border-color: transparent;
-    color: black;
+    color: white;
 }
 
 .footer {
     position: fixed;
     left: 0;
-    bottom: 5.5%;
+    bottom: 52px;
     width: 100%;
     background-color: transparent;
     color: white;
     text-align: center;
-    height: 3%;
+    height: 25px;
 }
 
 .header {
@@ -119,7 +119,7 @@ h1 {
 .footer2 {
     position: fixed;
     left: 0;
-    bottom: 1%;
+    bottom: 5px;
     width: 100%;
     background-color: transparent;
     color: white;
@@ -127,25 +127,18 @@ h1 {
 }
 
 .footer2-github {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
     content: url("gitHub.png");
 }
 
 .footer2-email {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 60px;
     content: url("emailIcon.png");
     cursor: pointer;
-}
-
-.footer2-twitter {
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    content: url("twitter.png");
 }
 
 .pfp {
@@ -201,8 +194,8 @@ h1 {
 .form-popup {
     display: none;
     position: fixed;
-    bottom: 0;
-    right: 15px;
+    right: 10px;
+    bottom: 52px;
     border: 3px solid #f1f1f1;
     z-index: 9;
 }
