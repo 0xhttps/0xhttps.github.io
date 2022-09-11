@@ -1,3 +1,5 @@
+const { Button } = require("react-bootstrap");
+
 const toggleButton = document.querySelector('#dark');
 const toggleColor = document.querySelector('#color-button')
 const toggleTextColor = document.querySelector('#text-color-button');
@@ -8,6 +10,7 @@ const pfp = document.querySelector('.pfp');
 const pfp2 = document.querySelector('.pfp2'); //might use later
 const pfpFooter = document.querySelector('.pfp-footer');    
 const emailForm = document.querySelector('.form-container');
+const connectButton = document.querySelector('.connect-wallet');
 
 let primaryHex;
 let secondaryHex;
@@ -15,6 +18,16 @@ let speed = 8.0;
 let maxSpeed = 0.5;
 let minSpeed = 8.0;
 let r,g,b;
+const [currentAccount, setCurrentAccount] = useState(null);
+
+async function getWallet() {
+    const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
+    const currentAccount = accounts[0]
+    setCurrentAccount(currentAccount)
+    console.log("Connected to account: " + currentAccount)
+    return currentAccount
+    
+}
 
 //generates random hex for background
 function generateHexColor () {

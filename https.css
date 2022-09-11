@@ -141,6 +141,20 @@ h1 {
     cursor: pointer;
 }
 
+.footer2-web3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    content: url("ethLogo.png");
+}
+
+.footer2-https {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    content: url("httpsPixel.png");
+}
+
 .pfp {
     width: 65px;
     height: 65px;
@@ -242,4 +256,8 @@ h1 {
 .form-container .btn:hover,
 .open-button:hover {
     opacity: 1;
+}
+
+.connect-wallet {
+    
 }

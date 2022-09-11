@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https.css">
 </head>
+
 <body>
 
     <!--header stuff-->
@@ -16,34 +18,25 @@
     <div class="header" style="padding-top:1%;padding-right: 1%;">
         <img id="dark" class="header-img-dark">
         <img id="color-button" class="header-img-color" onclick="togglePageColor()">
-        <img id="color-button" class="header-img-color" onclick="getWallet()">
     </div>
     <!--end of header stuff-->
 
     <!--page icon and speed buttons-->
     <!--this now changes speed of footer img spin. might get rid of this.-->
     <div style="padding-top: 1%;">
-        <img class="pfp" onclick="toggleSpinSpeed()"> 
+        <img class="pfp" onclick="toggleSpinSpeed()">
     </div>
     <!--end of page icon and speed buttons-->
 
     <!--title and contents (paragraph or whatever)-->
-    <h1>title</h1>
+    <h1>web3 stuffs</h1>
+        <Button onclick="getWallet()" class="connect-wallet">
+            Connect Wallet
+        </Button>
+
     <div class="cards" style="padding-bottom: 14%;">
         <article class="card">
             <div class="content">
-            {tab}Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem
-            ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis
-            cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae
-            suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu
-            turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa
-            tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis
-            aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit
-            amet risus nullam eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl pretium
-            fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse
-            sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper
 
                 <!--start of email form-->
                 <!--need to edit this form to fit the site better/ change colors with the buttons :)-->
@@ -53,7 +46,8 @@
                         <input type="hidden" name="_next" value="https://0xhttps.github.io/thanks.html">
                         <input type="email" name="email" placeholder="Email Address" required>
                         <input type="text" name="name" placeholder="Name" required>
-                        <textarea type="text" placeholder="Email contents here" required style="resize: none; overflow: auto; width: 100%;" rows="7" ></textarea>         
+                        <textarea type="text" placeholder="Email contents here" required
+                            style="resize: none; overflow: auto; width: 100%;" rows="7"></textarea>
                         <button type="submit" class="btn send">Send</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                     </form>
@@ -70,9 +64,9 @@
     <div class="footer2">
         <a href="https://github.com/0xhttps" target="_blank" rel="noopener noreferrer"><img class="footer2-github"></a>
         <img class="footer2-email" onclick="openForm()">
-        <a href="https://0xhttps.github.io/web3.html" target="_self" rel="noopener noreferrer"><img class="footer2-web3"></a>
-        <!--replace link above to https://0xhttps.github.io/web3.html-->
-        <!--replace link above to http://127.0.0.1:5500/web3.html when testing-->
+        <a href="https://0xhttps.github.io/index.html" target="_self" rel="noopener noreferrer"><img class="footer2-https"></a>
+            <!--replace link above to https://0xhttps.github.io/index.html-->
+            <!--replace link above to http://127.0.0.1:5500/index.html when testing-->
     </div>
     <!--end of footer-->
 
@@ -86,17 +80,8 @@
     </div>
     <!--end of moving footer img-->
 
-<script src="https.js"></script>
-<script src="https://rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
-<script>
-    async function getWallet() {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
-        const currentAccount = accounts[0]
-        setCurrentAccount(currentAccount)
-        console.log("Connected to account: " + currentAccount)
-        return currentAccount
-    }
-    
-</script>
+    <script src="https.js"></script>
+    <script src="https://rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
 </body>
+
 </html>
