@@ -256,3 +256,35 @@ h1 {
 .open-button:hover {
     opacity: 1;
 }
+
+.button-connect {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    left: 3%;
+    top: 15px;
+    vertical-align: middle;
+}
+
+.button-disconnect {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    display: none;
+    left: 3%;
+    top: 50px;
+    vertical-align: middle;
+}
+
+.wallet-balance {
+    opacity: 0;
+}

@@ -8,7 +8,9 @@ const pfp = document.querySelector('.pfp');
 const pfp2 = document.querySelector('.pfp2'); //might use later
 const pfpFooter = document.querySelector('.pfp-footer');    
 const emailForm = document.querySelector('.form-container');
-const button = document.querySelector('.btn');
+const button = document.querySelector('.button-connect');
+const buttonDisconnect = document.querySelector('.button-disconnect');
+const walletBalance = document.querySelector('.wallet-balance');
 
 let primaryHex;
 let secondaryHex;
@@ -17,11 +19,39 @@ let maxSpeed = 0.5;
 let minSpeed = 8.0;
 let r,g,b;
 
-function getWallet() {
-    const accounts = window.ethereum.request({ method: "eth_requestAccounts" });
-    const currentAccount = accounts[0];
-    console.log("Connected to account: " + currentAccount);
-    return currentAccount;
+let accounts;
+let balance;
+
+let connected = false;
+
+async function getWallet() {
+    try {
+        accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+        currentAccount = accounts[0];
+        console.log("Connected to account: " + currentAccount);
+        button.textContent = currentAccount;
+        connected = true;
+        buttonDisconnect.style.display = "inline";
+        walletBalance.style.opacity = 1;
+        getBalance();
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+async function getBalance() {
+    balance = await window.ethereum.request({method: 'eth_getBalance', params: [currentAccount, 'latest']});
+    console.log(balance);
+}
+
+async function disconnectWallet() {
+    if(currentAccount !== null) { 
+        currentAccount = null;
+        accounts = null;
+        button.textContent = 'Connect Wallet';
+        buttonDisconnect.style.display = "none";
+        walletBalance.style.opacity = 0;
+    }
 }
 
 //generates random hex for background
@@ -51,12 +81,16 @@ toggleButton.addEventListener('click', async () => {
         cardText.style.color = 'black';
         button.style.color = 'black';
         button.style.borderColor = 'black';
+        buttonDisconnect.style.color = 'black';
+        buttonDisconnect.style.borderColor = 'black';
     } else {
         pageBackGround.style.backgroundColor = 'black';
         pageHeader.style.color = 'white';
         cardText.style.color = 'white';
         button.style.color = 'white';
         button.style.borderColor = 'white';
+        buttonDisconnect.style.color = 'white';
+        buttonDisconnect.style.borderColor = 'white';
     }
 });
 
@@ -88,11 +122,12 @@ function togglePageColor() {
     cardText.style.color = secondaryHex;
     button.style.color = secondaryHex;
     button.style.borderColor = secondaryHex;
+    buttonDisconnect.style.color = secondaryHex;
+    buttonDisconnect.style.borderColor = secondaryHex;
 } 
 
 function copyColor() {
     var colorToCopy = primaryHex;
-
 }
 
 //opens email form

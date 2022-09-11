@@ -30,14 +30,16 @@
 
     <!--title and contents (paragraph or whatever)-->
     <h1>web3 stuffs</h1>
-        <Button onclick="getWallet()" class="btn btn-outline-transparent" style="border-color: white;color: white;">
+        <Button onclick="getWallet()" class="button-connect">
             Connect Wallet
+        </Button>
+        <Button onclick="disconnectWallet()" class="button-disconnect">
+            Disconnect Wallet
         </Button>
 
     <div class="cards" style="padding-bottom: 14%;">
         <article class="card">
             <div class="content">
-
                 <!--start of email form-->
                 <!--need to edit this form to fit the site better/ change colors with the buttons :)-->
                 <div class="form-popup" id="myForm">
@@ -53,10 +55,10 @@
                     </form>
                 </div>
                 <!--End of email form-->
-
             </div>
         </article>
     </div>
+    <h1 class="wallet-balance"></h1>
     <!--end of contents-->
 
     <!--start of footer icons / email icon-->
