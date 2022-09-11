@@ -1,5 +1,3 @@
-const { Button } = require("react-bootstrap");
-
 const toggleButton = document.querySelector('#dark');
 const toggleColor = document.querySelector('#color-button')
 const toggleTextColor = document.querySelector('#text-color-button');
@@ -10,7 +8,7 @@ const pfp = document.querySelector('.pfp');
 const pfp2 = document.querySelector('.pfp2'); //might use later
 const pfpFooter = document.querySelector('.pfp-footer');    
 const emailForm = document.querySelector('.form-container');
-const connectButton = document.querySelector('.connect-wallet');
+const button = document.querySelector('.btn');
 
 let primaryHex;
 let secondaryHex;
@@ -18,15 +16,12 @@ let speed = 8.0;
 let maxSpeed = 0.5;
 let minSpeed = 8.0;
 let r,g,b;
-const [currentAccount, setCurrentAccount] = useState(null);
 
-async function getWallet() {
-    const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
-    const currentAccount = accounts[0]
-    setCurrentAccount(currentAccount)
-    console.log("Connected to account: " + currentAccount)
-    return currentAccount
-    
+function getWallet() {
+    const accounts = window.ethereum.request({ method: "eth_requestAccounts" });
+    const currentAccount = accounts[0];
+    console.log("Connected to account: " + currentAccount);
+    return currentAccount;
 }
 
 //generates random hex for background
@@ -54,10 +49,14 @@ toggleButton.addEventListener('click', async () => {
         pageBackGround.style.backgroundColor = 'white';
         pageHeader.style.color = 'black';
         cardText.style.color = 'black';
+        button.style.color = 'black';
+        button.style.borderColor = 'black';
     } else {
         pageBackGround.style.backgroundColor = 'black';
         pageHeader.style.color = 'white';
         cardText.style.color = 'white';
+        button.style.color = 'white';
+        button.style.borderColor = 'white';
     }
 });
 
@@ -87,6 +86,8 @@ function togglePageColor() {
     pageBackGround.style.backgroundColor = primaryHex;
     pageHeader.style.color = secondaryHex;
     cardText.style.color = secondaryHex;
+    button.style.color = secondaryHex;
+    button.style.borderColor = secondaryHex;
 } 
 
 function copyColor() {

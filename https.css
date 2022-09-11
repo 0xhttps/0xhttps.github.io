@@ -8,7 +8,6 @@ body {
 
 h1 {
     color: white;
-    
 }
 
 #dark {
@@ -256,8 +255,4 @@ h1 {
 .form-container .btn:hover,
 .open-button:hover {
     opacity: 1;
-}
-
-.connect-wallet {
-    
 }
