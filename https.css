@@ -147,6 +147,13 @@ h1 {
     content: url("ethLogo.png");
 }
 
+.footer2-lens {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    content: url("lens.svg");
+}
+
 .footer2-https {
     width: 40px;
     height: 40px;
